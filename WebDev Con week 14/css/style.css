@@ -1,0 +1,342 @@
+/*------------------------------------------
+ @IMPORT FONTS
+ ------------------------------------------*/
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*------------------------------------------
+ SIMPLE RESET
+ ------------------------------------------*/
+ html, body, div, span, a, h1, h2, h3, h4, h5, h6, p, blockquote, img, ol, ul, li, input, label, select, footer, header, menu, nav, section{
+	margin: 0; 
+	padding: 0; 
+	font-size: 100%; 
+	list-style: none; 
+	border: 0;
+ }
+
+/*------------------------------------------
+ TABLE OF CONTENTS
+ ------------------------------------------
+  1. Color Library
+  2. General Styles
+  3. Grid Styles
+  4. Buttons & Navigation
+  5. Headers & Hero
+  6. Main 
+  	 6a. About
+  	 6b. Testimonials
+  	 6c. Schedule
+  	 6d. Speakers
+  7. Footers
+  8. Registration
+*/
+/*------------------------------------------
+ 1. Color Library
+ ------------------------------------------*/
+ :root{
+    --neutral-black:#000;
+    --neutral-white:#fff;
+    --primary: #457B9D;
+	--primary-drk: #1D3557;
+	--primary-drk2: #31587A;
+	--primary-tnt: #F1FAEE;
+	--primary-tnt2: #A8DADC;
+	--secondary: #E63946;
+	--secondary-drk: #DB0313;
+	--secondary-drk2: #CC1928;
+	--secondary-tnt: ;
+	--tertiary: #EE9055;
+	--tertiary-drk: #EA762E;
+	--tertiary-tnt: ;
+ }
+/*------------------------------------------
+ 2. General Styles
+ ------------------------------------------*/
+body{
+    font:normal 400 18px/1.5em 'Montserrat','Helvetica',sans-serif;
+    background-color: var(--primary-tnt);
+    color: var(--primary-drk);
+}
+h1{
+    color: var(--primary-tnt2);
+}
+h2{
+    font-size:50px;
+}
+h1,h2,h4{
+    font-weight:700;
+    color: var(--primary);
+}
+h3{
+    width: 60vw;
+    margin: auto;  /* add this declaration */
+    font-weight:500;
+    font-size:48px;
+    line-height:1.2em;
+    color: var(--primary-drk);
+}
+h4{
+    font-size: 24px;
+    line-height: 1.5em;
+}
+a{
+    text-decoration:none;
+    color: var(--primary);
+}
+p a,.orange-txt{
+    color: var(--tertiary);
+}
+nav li a:hover{
+    color: var(--primary-drk);
+    font-weight: 600;
+}
+header,footer{
+    background-color:var(--primary-tnt2);
+}
+header li, footer li{
+    list-style-type: none; 
+}
+.hdr-nav li,.speakers li, nav li{
+    display: inline-block;
+}
+.highlight{
+    background-color: yellow;
+    font-weight: 500;
+}
+*:hover{
+    transition-duration: 1s;
+}
+main{
+    text-align: center;
+}
+.intro{
+    font-size: 30px;
+    width: 80vw;
+    line-height: 42px;
+    margin-bottom: 35px;
+}
+/*------------------------------------------
+ 3. Grid Styles
+ ------------------------------------------*/
+ *,
+ *:before,
+ *:after{
+    box-sizing: border-box;
+ }
+ .flexbox{
+    display: flex;
+ }
+ .jc-sb{
+    justify-content: space-between;
+ }
+ .ai-cntr{
+    align-items: center;
+ }
+ .padding{
+    padding-top: 50px;
+    padding-bottom: 50px;
+ }
+ .hero, .tests, .speakers{
+    background-color: var(--neutral-white);
+ }
+ .container{
+    width: 1440px;
+    max-width: 85vw;
+    margin: auto;
+ }
+/*------------------------------------------
+ 4. Buttons & Navigation
+ ------------------------------------------*/
+ .button-cta1,.button-cta2,.button-gen{
+    display: inline-block;
+    height: 40px;
+    border-radius: 25px;
+    font: normal 500 15px 'Montserrat',Arial,sans-serif;
+    color: var(--neutral-white);
+    padding: 10px 25px;
+ }
+ .button-cta1{
+    background: var(--secondary);
+ }
+ .button-cta1:hover{
+    background: var(--secondary-drk2);
+ }
+ .button-cta2{
+    background: var(--primary);
+ }
+ .button-cta2:hover{
+    background: var(--primary-drk2);
+ }
+ .button-gen{
+    background: var(--neutral-white);
+    border: 2px solid var(--primary);
+    color: var(--primary);
+ }
+ .button-gen:hover{
+    background: var(--primary);
+    color: var(--neutral-white);
+ }
+/*------------------------------------------
+ 5. Headers & Hero
+ ------------------------------------------*/ 
+ header.padding{
+    padding-top: 0;
+ }
+ .hdr-nav{
+    padding-top: 12px;
+    padding-bottom: 12px;
+ }
+ a.logo{
+    position: relative;
+    overflow: hidden;
+    width: 245px;
+    max-width: 18vw;
+    height: 45px;
+    max-height: 40px;
+ }
+ a.logo img{
+    width: 100%;
+ }
+ .hdr-nav li{
+    font-weight: 600;
+    margin-right: 10px;
+ }
+ /* Delete this rule
+
+ li.bulletproof:last-child{
+    margin-right:0;
+ }
+     */
+
+ .social-icons img:hover{
+    box-shadow: .5px -.5px 15px var(--primary-drk);
+    border-radius: 50%;
+ }
+ .hero .container{
+    height: 80vh;
+    background: url(../imgs/developer-team.svg) right no-repeat;
+    background-size: 50% auto;
+ }
+ .hero .container div{
+    position: relative;
+    top: 20vh;
+    letter-spacing: -1.5;
+ }
+.hero h1{
+    width: 40vw;
+    font-size: 5.5vw;
+    line-height: .85em; 
+}
+.hero h2{
+    font-size: 2.95vw;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.5em;
+}
+.inner-hero{
+    background: var(--primary);
+    padding: 100px 75px 50px;
+}
+.inner-hero h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 64px;
+    color: var(--primary-tnt2); /* Change to --primary-tnt2 */
+}
+.inner-hero p{
+    width: 50vw;
+    margin: 50px auto 50px;
+}
+/*------------------------------------------
+ 6. Main
+ ------------------------------------------*/
+    /* >>>>>>>>>>>>>> 6a. ABOUT  <<<<<<<<<<<<<<<< */
+    .about img{
+        width: 100%;
+    }
+    /* >>>>>>>>>>>>>> 6b. TESTIMONIALS  <<<<<<<<<<<<<<<< */
+
+    /* >>>>>>>>>>>>>> 6c. SCHEDULE  <<<<<<<<<<<<<<<< */
+    .workshops{
+        text-align: left;
+        width: 45%;
+    }
+    .workshops .button-cta2{
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    /* >>>>>>>>>>>>>> 6d. SPEAKERS  <<<<<<<<<<<<<<<< */
+
+    .speakers ul{
+        margin-top: 15px;
+        margin-bottom: 50px;
+        flex-wrap: nowrap;
+    }
+    .speakers ul img{
+        border-radius: 50%;
+        width: 13vw;
+        filter: saturate(0%);
+    }
+    .speakers ul img:hover{
+        transition-duration: 1s;
+        filter: saturate(100%);
+    }
+    .speakers li{
+        margin-right: 1vw;
+    }
+    .speakers li:last-child{
+        margin-right: 0;
+    }
+    .speakers a{
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+    }
+    .speakers a[data-title]:hover::after{
+        content: attr(data-title);
+        position: absolute;
+        top: 90%;
+        left: 10px;
+        width: 90%;
+        margin: auto;
+        background-color: var(--secondary);
+        color: var(--neutral-white);
+    }
+/*------------------------------------------
+ 7. Footers
+ ------------------------------------------*/
+    .footer-nav li{
+        display: block;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 1em;
+        text-transform: uppercase;
+    }
+    .footer-nav a{
+        color: var(--neutral-white);
+    }
+    form input{
+        padding: 10px;
+        border-radius: 6px;
+    }
+    input[type="email"][placeholder="Sign up for our newsletter"]{
+        width: 300px;
+        margin-right: 10px;
+    }
+    .rt-col{
+        width: 20%;
+        text-align: right;
+        font-weight: 500;
+    }
+    footer small{
+        justify-content: safe flex-end;
+    }
+
+/*------------------------------------------
+ 8. Registration
+ ------------------------------------------*/
+
+ /* The following CSS will be needed for your registration page */
+
+ 
